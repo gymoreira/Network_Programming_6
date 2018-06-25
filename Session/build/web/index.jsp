@@ -4,7 +4,7 @@
     Author     : yago
 --%>
 
-<%@ include file="header.jsp" %> 
+<%@ include file="header.jsp" %>
         <%
             Long seconds = (Long) session.getAttribute("time");
             if (seconds != null && seconds != 0){
@@ -15,7 +15,7 @@
             String name = (String) session.getAttribute("name");
         %>
         
-            <span><%=name%> is login for <%=time%> seconds</span>
+        <span><%=name%> is login for <%=time%> seconds</span>
         
         <%
             } else {
@@ -26,4 +26,4 @@
         <%
             }
         %>
-    <%@ include file="footer.jsp" %> 
+    <%@ include file="footer.html" %> 

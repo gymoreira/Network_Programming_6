@@ -42,6 +42,7 @@ public class Session extends HttpServlet {
                 for(Cookie cookie: request.getCookies()){
                     if(cookie.getName().equals(request.getParameter("name")) && cookie.getValue().equals(request.getParameter("password"))) {
                         cookie1 = cookie;
+                        sessao.setAttribute("name", request.getParameter("name"));
                     }
                 }
                 if(cookie1==null){
@@ -55,8 +56,11 @@ public class Session extends HttpServlet {
             case "/register":
                 response.setContentType("text/html;charset=UTF-8");
                 String name = request.getParameter("name");
-                String password = request.getParameter("password");
-                sessao.setAttribute("name", request.getParameter("name"));
+                String password = request.getParameter("password");                
+                
+                //UserSession user = new UserSession(name, password);
+                //request.setAttribute("user", user);               
+                
                 Cookie cookie2 = null;
                 for(Cookie cookie: request.getCookies()){
                     if(cookie.getName().equals(request.getParameter("name"))) {

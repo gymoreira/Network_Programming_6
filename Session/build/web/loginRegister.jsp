@@ -5,7 +5,6 @@
 --%>
 
 <%@ include file="header.jsp" %>
-
     <%
         Object fail1 = session.getAttribute("fail");
         if(fail1 != null){
@@ -41,4 +40,4 @@
                 out.println("</form>");
             }
         %>
-<%@ include file="footer.jsp" %>
+<%@ include file="footer.html" %>
